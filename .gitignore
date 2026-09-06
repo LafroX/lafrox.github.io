@@ -1,0 +1,7 @@
+# Dependencias y configuración interna
+.opencode/
+node_modules/
+
+# Documentación interna del proyecto (no es contenido público del sitio)
+AGENTS.md
+PRESENTACIÓN DE EMPRESA.md

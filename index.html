@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es" class="js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LafroX | Software resiliente para logística y última milla</title>
+  <meta name="description" content="Plataformas offline-first, trazabilidad IoT y arquitecturas cloud-edge para cadenas de suministro que no pueden permitirse fallar. Más de una década de ingeniería en terreno.">
+  <meta name="theme-color" content="#0B1220">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script id="js-detect">document.documentElement.classList.replace("js","js-on");</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LafroX",
+    "description": "Ingeniería de software y consultoría tecnológica para cadenas de suministro, logística de última milla y distribución FMCG.",
+    "areaServed": "CL",
+    "email": "contacto@lafrox.cl",
+    "knowsAbout": ["Offline-first", "IoT", "Cloud-Edge", "Supply Chain", "Logística de última milla", "Cadena de frío"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#soluciones">Saltar al contenido</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap header-inner">
+      <a class="brand" href="#inicio" aria-label="LafroX, inicio">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="32" height="32" fill="#FF5A2C"/>
+          <path d="M9 12v10M9 17h8M17 12l-2.5 10M21 12v10" stroke="#0B1220" stroke-width="2.5" stroke-linecap="square"/>
+        </svg>
+        <span class="brand-name">LAFROX</span>
+        <span class="brand-sub">INGENIERÍA LOGÍSTICA</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#soluciones">Soluciones</a></li>
+          <li><a href="#porque">Por qué LafroX</a></li>
+          <li><a href="#casos">Casos</a></li>
+          <li><a href="#tecnologia">Tecnología</a></li>
+        </ul>
+        <a class="btn btn-primary btn--nav" href="#contacto">Agendar demo</a>
+      </nav>
+
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="hero-routes" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+          <path d="M-40 470 C 180 420, 260 540, 430 470 S 720 380, 880 430 S 1120 500, 1280 440" stroke="#FF5A2C" stroke-width="2" stroke-dasharray="58 10 10 12"/>
+          <path d="M-40 520 C 220 470, 300 595, 500 520 S 780 440, 930 495 S 1160 560, 1280 505" stroke="#FFC20E" stroke-width="2" stroke-dasharray="8 12"/>
+          <circle cx="430" cy="470" r="6" fill="#FF5A2C"/>
+          <circle cx="880" cy="430" r="6" fill="#FF5A2C"/>
+          <circle cx="500" cy="520" r="5" fill="#FFC20E"/>
+        </svg>
+      </div>
+
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">INGENIERÍA DE SOFTWARE · CADENA DE SUMINISTRO · CHILE</p>
+          <h1 class="reveal">La logística no se detiene. Tu software tampoco.</h1>
+          <p class="lead reveal">Diseñamos plataformas móviles <strong>offline-first</strong>, trazabilidad <strong>IoT</strong> y arquitecturas <strong>cloud-edge</strong> para operaciones que no pueden permitirse un fallo: reparto capilar, cadena de frío y distribución FMCG.</p>
+          <ul class="chip-list reveal" aria-label="Capacidades">
+            <li>OFFLINE-FIRST</li>
+            <li>TELEMETRÍA IoT</li>
+            <li>CLOUD-EDGE</li>
+            <li>ISO 27001</li>
+          </ul>
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary" href="#contacto">Cotizar solución</a>
+            <a class="btn btn-ghost" href="#casos">Ver casos de éxito</a>
+          </div>
+        </div>
+
+        <form class="quote-card reveal" id="quote-form" novalidate>
+          <div class="quote-card-head">
+            <span class="quote-tag">COTIZACIÓN RÁPIDA</span>
+            <p>Cuéntanos tu operación y en menos de 24 h hábiles vuelve un ingeniero con una propuesta concreta.</p>
+          </div>
+          <div class="field">
+            <label for="q-nombre">Nombre</label>
+            <input type="text" id="q-nombre" name="nombre" autocomplete="name" placeholder="Tu nombre" required>
+            <small class="err" role="alert"></small>
+          </div>
+          <div class="field">
+            <label for="q-correo">Correo corporativo</label>
+            <input type="email" id="q-correo" name="correo" autocomplete="email" placeholder="nombre@empresa.cl" required>
+            <small class="err" role="alert"></small>
+          </div>
+          <div class="field">
+            <label for="q-sector">Sector de la operación</label>
+            <select id="q-sector" name="sector" required>
+              <option value="">Elige un sector</option>
+              <option>Última milla / reparto</option>
+              <option>Carga terrestre</option>
+              <option>Cadena de frío / alimentos</option>
+              <option>Distribución FMCG</option>
+              <option>Retail</option>
+              <option>Minería / industrial</option>
+            </select>
+            <small class="err" role="alert"></small>
+          </div>
+          <button class="btn btn-primary btn--block" type="submit">Solicitar cotización</button>
+          <p class="micro">Tu correo no se comparte. Respuesta <strong>en menos de 24 h hábiles</strong>.</p>
+        </form>
+      </div>
+
+      <div class="stat-strip">
+        <div class="wrap stat-grid">
+          <div class="stat reveal">
+            <span class="stat-n"><span data-count="8" data-suffix="%">0</span></span>
+            <span class="stat-l">Alza de OTIF en operación de última milla de bebidas</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-n"><span data-count="30">0</span> min <em>RTO</em></span>
+            <span class="stat-l">Recuperación ante desastres de infraestructura</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-n"><span data-count="5">0</span> min <em>RPO</em></span>
+            <span class="stat-l">Máximo de datos en riesgo con respaldo activo</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-n">24/7</span>
+            <span class="stat-l">NOC activo con turnos de ingeniería SRE</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-n"><span data-count="8">0</span></span>
+            <span class="stat-l">Ingenieros civiles informáticos propios, sin tercerización</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="marquee" aria-label="Certificaciones y estándares">
+      <div class="wrap">
+        <div class="marquee-card">
+          <div class="marquee-track">
+            <ul class="marquee-list">
+              <li>AWS PARTNER NETWORK</li><li>CMMI-DEV NIVEL 3</li><li>ISO 9001</li><li>ISO 20000-1</li><li>ISO 27001</li><li>ITIL v4</li><li>DEVSECOPS</li><li>GS1 · DTE SII</li><li>PRUEBA DE ENTREGA DIGITAL</li>
+            </ul>
+            <ul class="marquee-list" aria-hidden="true">
+              <li>AWS PARTNER NETWORK</li><li>CMMI-DEV NIVEL 3</li><li>ISO 9001</li><li>ISO 20000-1</li><li>ISO 27001</li><li>ITIL v4</li><li>DEVSECOPS</li><li>GS1 · DTE SII</li><li>PRUEBA DE ENTREGA DIGITAL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="sec sec-light" id="soluciones">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow reveal">01 / SOLUCIONES</p>
+          <h2 class="reveal">Qué construimos para que tu operación siga rodando</h2>
+          <p class="sec-sub reveal">Seis piezas de ingeniería que se implementan solas o acopladas. Todas diseñadas para terreno real, no para presentaciones.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <span class="card-num">01</span>
+            <svg class="card-ico" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35a1 1 0 0 0-.78-.38H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>
+            </svg>
+            <h3>Última milla offline-first</h3>
+            <p>Aplicaciones móviles nativas para reparto y cobranza. El conductor trabaja sin señal: la ruta se cifra en el dispositivo y cada transacción se valida localmente.</p>
+            <ul>
+              <li>Datos locales encriptados AES-256</li>
+              <li>Firmas de entrega digitales (PoD)</li>
+              <li>Sincronización con tu ERP en &lt; 5 min</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-num">02</span>
+            <svg class="card-ico" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/>
+            </svg>
+            <h3>Trazabilidad y cadena de frío IoT</h3>
+            <p>Seguimiento lote-a-lote bajo estándar GS1 con telemetría de hardware rugged. Control inmutable de temperatura en cada punto del recorrido.</p>
+            <ul>
+              <li>Sensores para cámaras a -22 °C</li>
+              <li>Termógrafos vehiculares inalámbricos</li>
+              <li>Alertas de excursión térmica en tiempo real</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-num">03</span>
+            <svg class="card-ico" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/><circle cx="19" cy="7" r="2"/>
+            </svg>
+            <h3>Arquitectura cloud-edge resiliente</h3>
+            <p>Microservicios serverless sobre AWS (Fargate, ECS, Kinesis) capaces de absorber picos transaccionales sin interrumpir tu operación.</p>
+            <ul>
+              <li>Despliegues progresivos canary</li>
+              <li>4 ambientes segregados con WAF</li>
+              <li>Persistencia políglota distribuida</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-num">04</span>
+            <svg class="card-ico" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/>
+            </svg>
+            <h3>Optimización de rutas y flotas</h3>
+            <p>Algoritmos heurísticos de ruteo dinámico que reducen kilómetros en vacío y suben la capacidad de carga útil por vehículo.</p>
+            <ul>
+              <li>Menos kilómetros muertos por flota</li>
+              <li>Menor huella de carbono (ENMS)</li>
+              <li>Indicadores de utilización de activos</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-num">05</span>
+            <svg class="card-ico" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/>
+            </svg>
+            <h3>Automatización y despapelización</h3>
+            <p>Guías de despacho electrónicas (DTE SII), firma avanzada y prueba de entrega móvil. Se acabó el papel en preventa, cobranza y reparto.</p>
+            <ul>
+              <li>Documentos tributarios electrónicos</li>
+              <li>Firmas digitales con validez legal</li>
+              <li>Cobranza y devoluciones en terreno</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-num">06</span>
+            <svg class="card-ico" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+            <h3>Observabilidad y NOC 24/7</h3>
+            <p>Central de monitoreo de APIs e infraestructura con APM (Datadog, CloudWatch) y protocolos de escalamiento para ingeniería de guardia.</p>
+            <ul>
+              <li>Alertas automáticas ante caídas</li>
+              <li>Turnos on-call de SRE</li>
+              <li>RTO 30 min · RPO 5 min</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec-dark" id="porque">
+      <div class="wrap why-grid">
+        <div class="why-intro">
+          <p class="eyebrow reveal">02 / POR QUÉ LAFROX</p>
+          <h2 class="reveal">Nadie compra software. Compran que el reparto llegue.</h2>
+          <p class="sec-sub reveal">Cada decisión de arquitectura la tomamos con un criterio: que el camión complete la ruta, que la temperatura se respete y que el dato llegue entero. Todo lo demás sobra.</p>
+          <a class="btn btn-primary reveal" href="#contacto">Agendar una demo técnica</a>
+        </div>
+
+        <div class="why-list">
+          <article class="why-item reveal">
+            <span class="why-n">01</span>
+            <h3>El terreno manda, no la red</h3>
+            <p>Antes de llegar a tus bodegas probamos las apps en un laboratorio con jaulas de Faraday y pérdida total de señal 3G/4G/5G. Si el software aguanta ahí, aguanta tu ruta rural.</p>
+          </article>
+          <article class="why-item reveal">
+            <span class="why-n">02</span>
+            <h3>Cero papeles, cero pérdidas</h3>
+            <p>Las guías no se pierden porque no se imprimen. El repartidor firma en el móvil y el ERP concilia solo, en minutos, cuando vuelve al centro de distribución.</p>
+          </article>
+          <article class="why-item reveal">
+            <span class="why-n">03</span>
+            <h3>Seguridad auditada, no declarada</h3>
+            <p>ISO 27001, cifrado AES-256 en reposo, TLS 1.3 en tránsito y políticas zero-trust. Los datos de tus clientes se manejan como si fueran los nuestros.</p>
+          </article>
+          <article class="why-item reveal">
+            <span class="why-n">04</span>
+            <h3>Ingeniería propia, sin intermediarios</h3>
+            <p>Ocho ingenieros civiles informáticos, todos con certificación internacional. Misma gente que diseñó tu solución, la opera con SLA de respuesta y mejora continua.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec-light" id="casos">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow reveal">03 / CASOS DE ÉXITO</p>
+          <h2 class="reveal">Validado en operaciones de alta intensidad</h2>
+          <p class="sec-sub reveal">Dos despliegues en logística pesada chilena. Resultados auditables, no promesas de marketing.</p>
+        </div>
+
+        <div class="cases">
+          <article class="case reveal">
+            <div class="case-tag">
+              <span class="mono">ÚLTIMA MILLA · BEBIDAS</span>
+            </div>
+            <h3>Embotelladora Andina</h3>
+            <p>Reparto capilar en rutas rurales y geografía compleja, con pérdida permanente de cobertura móvil. La flota quedaba ciega y las rendiciones tardaban días.</p>
+            <p class="case-result">El resultado: <strong>0 guías perdidas</strong>, conciliación con el ERP en <strong>menos de 5 minutos</strong> al volver al centro de distribución.</p>
+            <div class="case-metrics">
+              <div><span>+8%</span><small>OTIF global de la operación</small></div>
+              <div><span>0</span><small>Guías físicas perdidas</small></div>
+              <div><span>&lt; 5 min</span><small>Sincronización con ERP</small></div>
+            </div>
+          </article>
+
+          <article class="case reveal">
+            <div class="case-tag">
+              <span class="mono">CADENA DE FRÍO · ALIMENTOS</span>
+            </div>
+            <h3>Agrosuper</h3>
+            <p>Trazabilidad milimétrica de perecibles desde el centro de distribución hasta el canal tradicional, con resguardo ante auditoría sanitaria en cada paso.</p>
+            <p class="case-result">El resultado: <strong>mermas de stock por quiebre de frío mitigadas</strong> y respuestas a auditorías en <strong>minutos, no días</strong>.</p>
+            <div class="case-metrics">
+              <div><span>-22 °C</span><small>Hardware rugged en cámaras</small></div>
+              <div><span>GS1</span><small>Trazabilidad lote-a-lote</small></div>
+              <div><span>días → min</span><small>Respuesta ante auditorías</small></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec-dark" id="tecnologia">
+      <div class="wrap">
+        <div class="sec-head sec-head--center">
+          <p class="eyebrow reveal">04 / CAPACIDAD INSTALADA</p>
+          <h2 class="reveal">Infraestructura que respalda cada SLA</h2>
+        </div>
+
+        <div class="env-grid" role="group" aria-label="Ambientes de despliegue DEV, QA, STG y PROD">
+          <div class="env reveal">
+            <span class="env-tag">DEV</span>
+            <p>Codificación y pruebas unitarias aisladas</p>
+          </div>
+          <div class="env reveal">
+            <span class="env-tag">QA</span>
+            <p>Integración automatizada y pruebas manuales</p>
+          </div>
+          <div class="env reveal">
+            <span class="env-tag">STG</span>
+            <p>Réplica exacta de producción para validación bajo carga</p>
+          </div>
+          <div class="env env--prod reveal">
+            <span class="env-tag">PROD</span>
+            <p>Operación real con despliegues canary de bajo riesgo</p>
+          </div>
+        </div>
+
+        <div class="cap-grid">
+          <div class="cap reveal">
+            <span class="mono">AWS PARTNER NETWORK</span>
+            <p>Arquitectos certificados en microservicios serverless e ingesta en tiempo real con Amazon Kinesis.</p>
+          </div>
+          <div class="cap reveal">
+            <span class="mono">LABORATORIO EDGE-TO-CLOUD</span>
+            <p>Jaulas de Faraday y cámaras para simular intermitencia extrema antes de cada despliegue en campo.</p>
+          </div>
+          <div class="cap reveal">
+            <span class="mono">CI/CD AUTOMATIZADO</span>
+            <p>Escaneo de vulnerabilidades antes de producción y ambientes físicamente segregados con WAF.</p>
+          </div>
+          <div class="cap reveal">
+            <span class="mono">NOC 24/7 &nbsp;·&nbsp; SRE</span>
+            <p>Monitoreo continuo con Datadog y CloudWatch, con turnos de ingeniería de guardia ante cualquier anomalía.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-label="Llamado a demo">
+      <div class="wrap cta-band-inner">
+        <p class="mono reveal">DEMO TÉCNICA · ~45 MIN</p>
+        <h2 class="reveal">Te la muestra un ingeniero, no un vendedor.</h2>
+        <p class="reveal">Trae tu operación real y vemos en pantalla cómo sobrevive sin red, cómo se traza el frío y cómo concilia tu ERP.</p>
+        <a class="btn btn-invert reveal" href="#contacto">Reservar sesión</a>
+      </div>
+    </section>
+
+    <section class="sec sec-light" id="contacto">
+      <div class="wrap contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow reveal">05 / COTIZACIÓN B2B</p>
+          <h2 class="reveal">Hablemos de tu operación, no de slides</h2>
+          <p class="sec-sub reveal">Cuéntanos qué mueves, en qué condiciones y dónde se te pierde el dato. Con eso armamos una propuesta acotada, con tiempos y alcance claros.</p>
+
+          <ul class="contact-list reveal">
+            <li>
+              <span class="mono">CORREO</span>
+              <a href="mailto:contacto@lafrox.cl">contacto@lafrox.cl</a>
+            </li>
+            <li>
+              <span class="mono">TELÉFONO</span>
+              <a href="tel:+56988554321">+56 9 8855 4321</a>
+            </li>
+            <li>
+              <span class="mono">HORARIO</span>
+              <span>Lun a vie · 8:30–18:30 CLT · NOC 24/7 para operaciones activas</span>
+            </li>
+            <li>
+              <span class="mono">UBICACIÓN</span>
+              <span>Santiago de Chile · Operación nacional</span>
+            </li>
+          </ul>
+
+          <div class="trust-note reveal">
+            <strong>Respuesta en menos de 24 h hábiles.</strong>
+            <span>Tu solicitud la revisa un ingeniero de la mesa técnica, no un call center.</span>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="c-nombre">Nombre completo</label>
+              <input type="text" id="c-nombre" name="nombre" autocomplete="name" placeholder="Tu nombre y apellido" required>
+              <small class="err" role="alert"></small>
+            </div>
+            <div class="field">
+              <label for="c-empresa">Empresa</label>
+              <input type="text" id="c-empresa" name="empresa" autocomplete="organization" placeholder="Nombre de tu empresa" required>
+              <small class="err" role="alert"></small>
+            </div>
+            <div class="field">
+              <label for="c-correo">Correo corporativo</label>
+              <input type="email" id="c-correo" name="correo" autocomplete="email" placeholder="nombre@empresa.cl" required>
+              <small class="err" role="alert"></small>
+            </div>
+            <div class="field">
+              <label for="c-telefono">Teléfono de contacto</label>
+              <input type="tel" id="c-telefono" name="telefono" autocomplete="tel" placeholder="+56 9 ..." required>
+              <small class="err" role="alert"></small>
+            </div>
+            <div class="field">
+              <label for="c-sector">Sector de la operación</label>
+              <select id="c-sector" name="sector" required>
+                <option value="">Elige un sector</option>
+                <option>Última milla / reparto</option>
+                <option>Carga terrestre</option>
+                <option>Cadena de frío / alimentos</option>
+                <option>Distribución FMCG</option>
+                <option>Retail</option>
+                <option>Minería / industrial</option>
+              </select>
+              <small class="err" role="alert"></small>
+            </div>
+            <div class="field">
+              <label for="c-flota">Tamaño de la operación</label>
+              <select id="c-flota" name="flota">
+                <option value="">Si no aplica, déjalo vacío</option>
+                <option>Menos de 10 vehículos / rutas</option>
+                <option>Entre 10 y 50</option>
+                <option>Entre 51 y 150</option>
+                <option>Más de 150</option>
+                <option>Aún no tengo flota propia</option>
+              </select>
+              <small class="err" role="alert"></small>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="c-mensaje">¿Qué necesitas resolver?</label>
+            <textarea id="c-mensaje" name="mensaje" rows="4" placeholder="p. ej. reducimos reentregas en la última milla, perdemos datos en rutas rurales, nos exigen trazabilidad de frío..." required></textarea>
+            <small class="err" role="alert"></small>
+          </div>
+
+          <div class="field field--check">
+            <input type="checkbox" id="c-consent" name="consent" required>
+            <label for="c-consent">Autorizo a LafroX a contactarme para responder esta solicitud. Puedo pedir la baja cuando quiera.</label>
+            <small class="err err--check" role="alert"></small>
+          </div>
+
+          <button class="btn btn-primary btn--block" type="submit">Enviar solicitud de cotización</button>
+          <p class="micro">Al enviar aceptas nuestra política de datos. Nada de listas de terceros.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <p class="brand-name">LAFROX</p>
+        <p>Ingeniería de software para cadenas de suministro que no pueden permitirse fallar. Desde Santiago para toda la operación nacional.</p>
+        <p class="mono footer-monoline">OFFLINE-FIRST · CLOUD-EDGE · DTE · POD MÓVIL</p>
+      </div>
+      <nav class="footer-col" aria-label="Soluciones">
+        <p class="mono">SOLUCIONES</p>
+        <ul>
+          <li><a href="#soluciones">Última milla offline-first</a></li>
+          <li><a href="#soluciones">Cadena de frío IoT</a></li>
+          <li><a href="#soluciones">Routing y flotas</a></li>
+          <li><a href="#soluciones">Despapelización DTE</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Empresa">
+        <p class="mono">EMPRESA</p>
+        <ul>
+          <li><a href="#porque">Por qué LafroX</a></li>
+          <li><a href="#casos">Casos de éxito</a></li>
+          <li><a href="#tecnologia">Capacidad instalada</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <p class="mono">CONTACTO</p>
+        <ul>
+          <li><a href="mailto:contacto@lafrox.cl">contacto@lafrox.cl</a></li>
+          <li><a href="tel:+56988554321">+56 9 8855 4321</a></li>
+          <li><span>Santiago de Chile</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <div class="wrap footer-base-inner">
+        <p>© <span data-year>2026</span> LafroX SpA · Ingeniería y consultoría tecnológica</p>
+        <p class="mono">CMMI-DEV 3 · ISO 9001 · ISO 20000-1 · ISO 27001 · AWS PARTNER</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
