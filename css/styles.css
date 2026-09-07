@@ -9,6 +9,7 @@
   --ink-2: #10141B;
   --panel: #14181F;
   --line-dark: rgba(255, 255, 255, 0.12);
+  --line-strong: rgba(255, 255, 255, 0.28);
   --text-soft: #CBD2DC;
   --text-dim: #93A0B0;
   --bone: #F6F7F9;
@@ -415,6 +416,7 @@ h2 { font-size: clamp(1.85rem, 5.5vw, 3rem); margin-block: 1rem 1.125rem; }
   width: fit-content;
 }
 .env--prod .env-tag { background: var(--yellow); color: var(--yellow-ink); }
+.env--dr .env-tag { background: var(--ink); color: var(--yellow); border: 1px solid var(--orange); }
 .env p { color: var(--muted-txt); font-size: 0.9rem; font-weight: 600; }
 
 .cap-grid { display: grid; gap: 1.25rem; }
@@ -424,7 +426,7 @@ h2 { font-size: clamp(1.85rem, 5.5vw, 3rem); margin-block: 1rem 1.125rem; }
 
 @media (min-width: 640px) { .cap-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) {
-  .env-grid { grid-template-columns: repeat(4, 1fr); }
+  .env-grid { grid-template-columns: repeat(5, 1fr); }
   .cap-grid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
 }
 
@@ -572,3 +574,160 @@ html.js-on .reveal.is-visible { opacity: 1; transform: none; }
   .card { transition: none; }
   .btn { transition: none; }
 }
+
+/* ---------- Empresa: hitos, misión/visión, valores ---------- */
+.institucional-grid { display: grid; gap: 2.5rem; }
+.milestones h3, .mvv .mono, .sub-block-title { color: var(--yellow); }
+.milestones h3 { color: #fff; font-size: 1.15rem; margin-bottom: 1rem; }
+.milestones ol { list-style: none; }
+.milestones li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  padding: 1.35rem 0;
+  border-top: 1px solid var(--line-dark);
+}
+.milestones li:last-child { border-bottom: 1px solid var(--line-dark); }
+.milestones li > span {
+  font-family: var(--f-head);
+  font-weight: 900;
+  font-size: 1.35rem;
+  color: var(--orange);
+  padding-top: 0.15rem;
+}
+.milestones strong { color: #fff; display: block; margin-bottom: 0.3rem; }
+.milestones p { color: var(--text-soft); font-size: 0.92rem; }
+
+.mvv { display: grid; gap: 1.25rem; align-content: start; }
+.mvv-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  display: grid;
+  gap: 0.7rem;
+  box-shadow: var(--shadow-sm);
+}
+.mvv-card .mono { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; color: var(--orange-dark); }
+.mvv-card p { color: var(--muted-txt); font-size: 0.97rem; }
+
+.values {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+.value {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.5rem 1.5rem;
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+  box-shadow: var(--shadow-sm);
+}
+.value span { font-family: var(--f-head); font-weight: 900; color: var(--orange-dark); font-size: 1.05rem; }
+.value strong { font-size: 1.08rem; color: var(--ink-txt); }
+.value p { color: var(--muted-txt); font-size: 0.9rem; }
+
+@media (min-width: 768px) { .values { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) {
+  .institucional-grid { grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .values { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ---------- Equipo ---------- */
+.team-grid { display: grid; gap: 1.25rem; }
+.member {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.5rem;
+  display: grid;
+  gap: 0.6rem;
+  align-content: start;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+.member:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.member .role {
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--orange-dark);
+}
+.member h3 { font-size: 1.15rem; }
+.member .certs { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.member .certs li {
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--ink-txt);
+  background: var(--bone-2);
+  border-radius: var(--radius-pill);
+  padding: 0.3rem 0.65rem;
+}
+.member p { color: var(--muted-txt); font-size: 0.9rem; }
+
+@media (min-width: 640px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .team-grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* ---------- Casos: nota de referencia ---------- */
+.case-ref {
+  margin-top: 0.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-family: var(--f-mono);
+  font-size: 0.74rem;
+  line-height: 1.5;
+  color: var(--muted-txt);
+}
+.case-ref span {
+  color: var(--orange-dark);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- Tecnología: stack y certificaciones ---------- */
+.sub-block-title { font-size: 1.2rem; margin-block: 2.5rem 1rem; }
+.stack-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.stack-chips li {
+  font-family: var(--f-mono);
+  font-size: 0.74rem;
+  color: var(--text-soft);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-pill);
+  padding: 0.45rem 0.85rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+.cert-grid { display: grid; gap: 1.25rem; }
+.cert {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.5rem 1.4rem;
+  display: grid;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-sm);
+}
+.cert strong { color: var(--ink-txt); font-size: 1rem; }
+.cert p { color: var(--muted-txt); font-size: 0.88rem; }
+
+@media (min-width: 640px) { .cert-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .cert-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* ---------- Accesibilidad ---------- */
+.a11y { border-top: 1px solid var(--line-dark); }
+.a11y-inner { display: grid; gap: 2rem; }
+.a11y-copy h2 { margin-block-start: 1rem; }
+.a11y-copy p:not(.eyebrow) { color: var(--text-soft); max-width: 56ch; }
+.a11y-meta {
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+  align-content: center;
+}
+.a11y-meta .mono { color: var(--orange); font-size: 0.74rem; letter-spacing: 0.14em; }
+.a11y-meta p:not(.mono) { color: var(--text-soft); font-size: 0.92rem; }
+.a11y-meta a { color: var(--yellow); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+
+@media (min-width: 900px) { .a11y-inner { grid-template-columns: 1.4fr 0.6fr; align-items: center; gap: 4rem; } }
