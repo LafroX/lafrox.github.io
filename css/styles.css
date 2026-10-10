@@ -174,6 +174,7 @@ h2 { font-size: clamp(1.85rem, 5.5vw, 3rem); margin-block: 1rem 1.125rem; }
 .site-header.scrolled { background: rgba(11, 13, 18, 0.92); backdrop-filter: blur(8px); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 68px; }
 .brand { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; }
+.brand-logo { width: 38px; height: 38px; flex: none; display: block; }
 .brand-name { font-family: var(--f-head); font-weight: 900; font-size: 1.35rem; letter-spacing: 0.02em; line-height: 1; }
 .brand-sub {
   font-family: var(--f-mono);
@@ -395,6 +396,7 @@ h2 { font-size: clamp(1.85rem, 5.5vw, 3rem); margin-block: 1rem 1.125rem; }
 .case-metrics small { font-size: 0.72rem; line-height: 1.35; color: var(--muted-txt); }
 
 @media (min-width: 900px) { .cases { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1180px) { .cases { grid-template-columns: repeat(3, 1fr); } }
 
 /* ---------- Capacidad instalada ---------- */
 .env-grid { display: grid; gap: 1.25rem; margin-bottom: 2rem; grid-template-columns: 1fr 1fr; }

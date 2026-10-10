@@ -94,7 +94,7 @@
       if (!start) start = ts;
       var progress = Math.min((ts - start) / duration, 1);
       var eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(target * eased) + suffix;
+      el.textContent = Math.round(target * eased).toLocaleString("es-CL") + suffix;
       if (progress < 1) window.requestAnimationFrame(step);
     };
     window.requestAnimationFrame(step);
@@ -108,7 +108,7 @@
             if (prefersReducedMotion) {
               var target = parseInt(entry.target.getAttribute("data-count"), 10) || 0;
               entry.target.textContent =
-                target + (entry.target.getAttribute("data-suffix") || "");
+                target.toLocaleString("es-CL") + (entry.target.getAttribute("data-suffix") || "");
             } else {
               animateCount(entry.target);
             }
